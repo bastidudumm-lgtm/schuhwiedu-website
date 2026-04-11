@@ -135,6 +135,11 @@ section{padding:5rem clamp(1.5rem,5vw,3.5rem);}
 .shoe-card img{width:100%;height:150px;object-fit:contain;background:#fff;padding:.8rem;display:block;}
 .shoe-name{padding:.7rem 1rem .2rem;font-size:.82rem;font-weight:700;color:var(--forest);}
 .shoe-gender{padding:0 1rem .8rem;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+@media(max-width:600px){
+  .shoe-grid{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:1rem;padding-bottom:.8rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .shoe-grid::-webkit-scrollbar{display:none;}
+  .shoe-card{min-width:155px;flex-shrink:0;scroll-snap-align:start;}
+}
 
 
 /* SONSTIGES */
@@ -632,3 +637,6 @@ function showTab(id, btn) {
   document.getElementById('tab-' + id).classList.add('active');
   btn.classList.add('active');
 }
+</script>
+</body>
+</html>
